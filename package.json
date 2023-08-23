@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "dendry": "github:aucchen/dendry"
+  },
+  "scripts": {
+    "dendry": "dendry"
+  }
+}

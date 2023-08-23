@@ -1,0 +1,20 @@
+title: Harbour Master's Hut
+new-page: true
+tags: harbour
+
+The harbor master's hut is a small house near the water's edge, 
+where boats and ships come. It's a simple building made of wood, 
+with a thatched roof on top. Inside, there are maps on the walls 
+and a big table where the harbor master plans and watches over 
+the harbor.
+
+-@look_map: Examine the map
+
+
+@look_map
+view-if: know_of_map != "seen"
+on-arrival: know_of_map="seen"
+
+The map shows the harbor and the surrounding area. You notice a
+**secret passage** marked on the map that leads to the **fortress**.
+A symbol of a **key** is marked next to the passage.

@@ -1,0 +1,37 @@
+title: Tavern
+new-page: true
+tags: harbour
+
+The pirate island's tavern is a cozy place by the sea where 
+pirates and travelers come together. Inside, there are wooden 
+tables, lanterns hanging, and the smell of food. Laughter and 
+stories fill the air as people eat, drink, and have a good time.
+
+You are [+ hunger : qhunger +].
+
+- @eat : Eat something
+- @brawl : Start a fight
+
+
+@eat
+new-page: false
+choose-if: hunger > 0
+unavailable-subtitle: You are not hungry.
+on-departure: hunger -= 1
+go-to: @end-activity
+
+You eat something and feel slightly better.
+
+
+@brawl
+new-page: false
+choose-if: hunger < 5
+unavailable-subtitle: You are too hungry to fight.
+on-departure: hunger += 1
+go-to: @end-activity
+
+You start a fight with a random pirate. You get a litle more hungry.
+
+@end-activity
+
+- @tavern : Continue...
